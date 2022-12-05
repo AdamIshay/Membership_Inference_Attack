@@ -229,17 +229,19 @@ def train(
                 print("Early stopping...")
                 break
 
-    # load best model
-    print("Loading best model...")
-    print(f"Best valid loss: {best_valid_loss:4.2}")
-    print(f"Best valid top5 accuracy: {best_valid_acc:4.2}")
-    model.load_state_dict(
-        torch.load(
-            os.path.join(
-                save_path,
-                f"shadow_{shadow_number}_loss_{best_valid_loss:4.2}_acc5_{best_valid_acc}.ckpt",
-            )
-        )
-    )
+# =============================================================================
+#     # load best model
+#     print("Loading best model...")
+#     print(f"Best valid loss: {best_valid_loss:4.2}")
+#     print(f"Best valid top5 accuracy: {best_valid_acc:4.2}")
+#     model.load_state_dict(
+#         torch.load(
+#             os.path.join(
+#                 save_path,
+#                 f"shadow_{shadow_number}_loss_{best_valid_loss:4.2}_acc5_{best_valid_acc}.ckpt",
+#             )
+#         )
+#     )
+# =============================================================================
     return model
 
