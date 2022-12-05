@@ -21,7 +21,7 @@ CFG:
   val_batch_size: 512
   logging_steps: 1000
   save_path: ./ckpt
-  target_train_size: 7000 # fraction to divide CIFAR test dataset for target model training
+  target_train_size: 5000 # fraction to divide CIFAR test dataset for target model training
   bool_pretrained: false
 # config for attack model
 
